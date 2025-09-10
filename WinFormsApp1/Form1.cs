@@ -83,11 +83,11 @@ namespace WinFormsApp1
         {
             string txt = txtArray.Text ?? "";
 
-            // Заменяем запятые, точки с запятой и другие разделители на пробел
+           
             char[] separators = new char[] {' ', ',', ';', '\n', '\r', '\t' };
             var parts = txt.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
-            // Преобразуем каждый элемент в int (включая отрицательные)
+            
             var list = new List<int>();
             foreach (var s in parts)
             {
@@ -99,7 +99,7 @@ namespace WinFormsApp1
 
             currentArray = list.ToArray();
 
-            // Обновляем текстовое поле и результат
+           
             txtArray.Text = string.Join(", ", currentArray);
             txtResult.Text = $"Масив прийнято ({currentArray.Length} елементів).";
         }
